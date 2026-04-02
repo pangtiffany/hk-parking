@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 10px;
+  background: #1a73e8;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+#map {
+  flex: 2;
+}
+
+#list {
+  flex: 1;
+  overflow-y: auto;
+  border-left: 1px solid #ccc;
+}
+
+.carpark {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.green { color: green; }
+.yellow { color: orange; }
+.red { color: red; }
+.gray { color: gray; }

@@ -3,32 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <title>HK Parking Vacancies</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Leaflet Map -->
+  <!-- Leaflet -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet/dist/leaflet.css"
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
 <header>
-  <h1>HK Parking Vacancies<br><span>香港即時泊位</span></h1>
-  <select id="langSwitch">
-    <option value="en">English</option>
-    <option value="zh">繁體中文</option>
-  </select>
+  <h1>🚗 HK Parking Vacancies</h1>
+
+  <div class="controls">
+    <select id="districtFilter">
+      <option value="">All Districts</option>
+    </select>
+
+    <button id="nearMeBtn">📍 Near Me</button>
+
+    <select id="langSelect">
+      <option value="en_US">English</option>
+      <option value="zh_TW">繁體中文</option>
+    </select>
+  </div>
 </header>
 
-<div id="container">
+<main id="container">
   <div id="map"></div>
   <div id="list"></div>
-</div>
+</main>
 
+<!-- JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="app.js"></script>
+<script src="js/api.js"></script>
+<script src="js/map.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/refresh.js"></script>
+
 </body>
 </html>
